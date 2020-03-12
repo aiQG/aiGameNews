@@ -6,13 +6,14 @@
 //  Copyright © 2020 aiQG_. All rights reserved.
 //
 
+//取得基本信息
 import Foundation
-import Kanna
-struct WebCrawler{
+//import Kanna
+class WebCrawler: ObservableObject{
 	let url = URL(string: "https://www.wowchina.com/zh-cn/news.frag?page=1")!
+	@Published var dic: [(String?, String?, String?, String?, String?)] = []
 	
-	func call() -> [(String?, String?, String?, String?, String?)] {
-		var dic: [(String?, String?, String?, String?, String?)] = []
+	func call() {
 		let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
 			guard let html = data else { return }
 			if let doc = try? HTML(html: html, encoding: .utf8) {
@@ -43,12 +44,11 @@ struct WebCrawler{
 				}
 				// finally get tuples
 				for i in 0..<max(Link.count, imageLink.count, title.count, content.count, date.count) {
-					dic.append((Link[i], imageLink[i], title[i], content[i], date[i]))
+					self.dic.append((Link[i], imageLink[i], title[i], content[i], date[i]))
 				}
 			}
 		}
 		task.resume()
 		
-		return dic
 	}
 }

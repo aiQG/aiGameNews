@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,9 +15,16 @@
 		598220A424190FE4009D1C17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 598220A224190FE4009D1C17 /* LaunchScreen.storyboard */; };
 		598220AC2419C529009D1C17 /* WebCrawler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598220AB2419C529009D1C17 /* WebCrawler.swift */; };
 		598220B02419C837009D1C17 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 598220AE2419C837009D1C17 /* README.md */; };
-		598220B32419C92C009D1C17 /* Kanna in Frameworks */ = {isa = PBXBuildFile; productRef = 598220B22419C92C009D1C17 /* Kanna */; };
 		598220B52419CE7F009D1C17 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598220B42419CE7F009D1C17 /* WebView.swift */; };
-		598220B72419E088009D1C17 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598220B62419E088009D1C17 /* ListItem.swift */; };
+		59822106241A28EE009D1C17 /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59822103241A28EE009D1C17 /* AsyncImage.swift */; };
+		59822107241A28EE009D1C17 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59822104241A28EE009D1C17 /* ImageCache.swift */; };
+		59822108241A28EE009D1C17 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59822105241A28EE009D1C17 /* ImageLoader.swift */; };
+		5982210E241A2929009D1C17 /* Kanna.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59822109241A2929009D1C17 /* Kanna.swift */; };
+		5982210F241A2929009D1C17 /* libxmlHTMLNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5982210A241A2929009D1C17 /* libxmlHTMLNode.swift */; };
+		59822110241A2929009D1C17 /* libxmlParserOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5982210B241A2929009D1C17 /* libxmlParserOption.swift */; };
+		59822111241A2929009D1C17 /* CSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5982210C241A2929009D1C17 /* CSS.swift */; };
+		59822112241A2929009D1C17 /* libxmlHTMLDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5982210D241A2929009D1C17 /* libxmlHTMLDocument.swift */; };
+		59822114241A4401009D1C17 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59822113241A4401009D1C17 /* ListItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +39,19 @@
 		598220AB2419C529009D1C17 /* WebCrawler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebCrawler.swift; sourceTree = "<group>"; };
 		598220AE2419C837009D1C17 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		598220B42419CE7F009D1C17 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
-		598220B62419E088009D1C17 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
+		598220CB241A1FD0009D1C17 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = ../../../usr/lib/libxml2.2.dylib; sourceTree = "<group>"; };
+		598220CF241A204D009D1C17 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		598220EE241A254B009D1C17 /* libxml2-kanna.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "libxml2-kanna.h"; sourceTree = "<group>"; };
+		598220EF241A254B009D1C17 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		59822103241A28EE009D1C17 /* AsyncImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
+		59822104241A28EE009D1C17 /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		59822105241A28EE009D1C17 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		59822109241A2929009D1C17 /* Kanna.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kanna.swift; sourceTree = "<group>"; };
+		5982210A241A2929009D1C17 /* libxmlHTMLNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = libxmlHTMLNode.swift; sourceTree = "<group>"; };
+		5982210B241A2929009D1C17 /* libxmlParserOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = libxmlParserOption.swift; sourceTree = "<group>"; };
+		5982210C241A2929009D1C17 /* CSS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSS.swift; sourceTree = "<group>"; };
+		5982210D241A2929009D1C17 /* libxmlHTMLDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = libxmlHTMLDocument.swift; sourceTree = "<group>"; };
+		59822113241A4401009D1C17 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +59,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				598220B32419C92C009D1C17 /* Kanna in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +71,7 @@
 				598220AE2419C837009D1C17 /* README.md */,
 				5982209624190FE3009D1C17 /* TheGameNews */,
 				5982209524190FE3009D1C17 /* Products */,
+				598220CA241A1FD0009D1C17 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,12 +89,21 @@
 				5982209724190FE3009D1C17 /* AppDelegate.swift */,
 				5982209924190FE3009D1C17 /* SceneDelegate.swift */,
 				5982209B24190FE3009D1C17 /* ContentView.swift */,
-				598220B62419E088009D1C17 /* ListItem.swift */,
-				598220AB2419C529009D1C17 /* WebCrawler.swift */,
 				598220B42419CE7F009D1C17 /* WebView.swift */,
+				598220AB2419C529009D1C17 /* WebCrawler.swift */,
+				59822113241A4401009D1C17 /* ListItem.swift */,
+				59822103241A28EE009D1C17 /* AsyncImage.swift */,
+				59822104241A28EE009D1C17 /* ImageCache.swift */,
+				59822105241A28EE009D1C17 /* ImageLoader.swift */,
 				5982209D24190FE4009D1C17 /* Assets.xcassets */,
 				598220A224190FE4009D1C17 /* LaunchScreen.storyboard */,
 				598220A524190FE4009D1C17 /* Info.plist */,
+				5982210C241A2929009D1C17 /* CSS.swift */,
+				59822109241A2929009D1C17 /* Kanna.swift */,
+				5982210D241A2929009D1C17 /* libxmlHTMLDocument.swift */,
+				5982210A241A2929009D1C17 /* libxmlHTMLNode.swift */,
+				5982210B241A2929009D1C17 /* libxmlParserOption.swift */,
+				598220ED241A254B009D1C17 /* Modules */,
 				5982209F24190FE4009D1C17 /* Preview Content */,
 			);
 			path = TheGameNews;
@@ -88,6 +116,24 @@
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
+		};
+		598220CA241A1FD0009D1C17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				598220CF241A204D009D1C17 /* libxml2.tbd */,
+				598220CB241A1FD0009D1C17 /* libxml2.2.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		598220ED241A254B009D1C17 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				598220EE241A254B009D1C17 /* libxml2-kanna.h */,
+				598220EF241A254B009D1C17 /* module.modulemap */,
+			);
+			path = Modules;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -106,7 +152,6 @@
 			);
 			name = TheGameNews;
 			packageProductDependencies = (
-				598220B22419C92C009D1C17 /* Kanna */,
 			);
 			productName = TheGameNews;
 			productReference = 5982209424190FE3009D1C17 /* TheGameNews.app */;
@@ -137,7 +182,6 @@
 			);
 			mainGroup = 5982208B24190FE3009D1C17;
 			packageReferences = (
-				598220B12419C92C009D1C17 /* XCRemoteSwiftPackageReference "Kanna" */,
 			);
 			productRefGroup = 5982209524190FE3009D1C17 /* Products */;
 			projectDirPath = "";
@@ -167,12 +211,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				598220B72419E088009D1C17 /* ListItem.swift in Sources */,
 				5982209824190FE3009D1C17 /* AppDelegate.swift in Sources */,
 				598220B52419CE7F009D1C17 /* WebView.swift in Sources */,
+				5982210F241A2929009D1C17 /* libxmlHTMLNode.swift in Sources */,
 				598220AC2419C529009D1C17 /* WebCrawler.swift in Sources */,
+				59822106241A28EE009D1C17 /* AsyncImage.swift in Sources */,
+				59822111241A2929009D1C17 /* CSS.swift in Sources */,
+				59822107241A28EE009D1C17 /* ImageCache.swift in Sources */,
 				5982209A24190FE3009D1C17 /* SceneDelegate.swift in Sources */,
+				59822114241A4401009D1C17 /* ListItem.swift in Sources */,
 				5982209C24190FE3009D1C17 /* ContentView.swift in Sources */,
+				59822112241A2929009D1C17 /* libxmlHTMLDocument.swift in Sources */,
+				59822108241A28EE009D1C17 /* ImageLoader.swift in Sources */,
+				59822110241A2929009D1C17 /* libxmlParserOption.swift in Sources */,
+				5982210E241A2929009D1C17 /* Kanna.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,12 +366,14 @@
 				ENABLE_PREVIEWS = YES;
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = TheGameNews/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "aiQG-.TheGameNews";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Modules";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -335,12 +389,14 @@
 				ENABLE_PREVIEWS = YES;
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = TheGameNews/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "aiQG-.TheGameNews";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Modules";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -368,25 +424,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		598220B12419C92C009D1C17 /* XCRemoteSwiftPackageReference "Kanna" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/tid-kijyun/Kanna.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		598220B22419C92C009D1C17 /* Kanna */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 598220B12419C92C009D1C17 /* XCRemoteSwiftPackageReference "Kanna" */;
-			productName = Kanna;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5982208C24190FE3009D1C17 /* Project object */;
 }
