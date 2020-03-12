@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,11 @@
 		5982209E24190FE4009D1C17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5982209D24190FE4009D1C17 /* Assets.xcassets */; };
 		598220A124190FE4009D1C17 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 598220A024190FE4009D1C17 /* Preview Assets.xcassets */; };
 		598220A424190FE4009D1C17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 598220A224190FE4009D1C17 /* LaunchScreen.storyboard */; };
+		598220AC2419C529009D1C17 /* WebCrawler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598220AB2419C529009D1C17 /* WebCrawler.swift */; };
+		598220B02419C837009D1C17 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 598220AE2419C837009D1C17 /* README.md */; };
+		598220B32419C92C009D1C17 /* Kanna in Frameworks */ = {isa = PBXBuildFile; productRef = 598220B22419C92C009D1C17 /* Kanna */; };
+		598220B52419CE7F009D1C17 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598220B42419CE7F009D1C17 /* WebView.swift */; };
+		598220B72419E088009D1C17 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598220B62419E088009D1C17 /* ListItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,10 @@
 		598220A024190FE4009D1C17 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		598220A324190FE4009D1C17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		598220A524190FE4009D1C17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		598220AB2419C529009D1C17 /* WebCrawler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebCrawler.swift; sourceTree = "<group>"; };
+		598220AE2419C837009D1C17 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		598220B42419CE7F009D1C17 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		598220B62419E088009D1C17 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				598220B32419C92C009D1C17 /* Kanna in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +50,7 @@
 		5982208B24190FE3009D1C17 = {
 			isa = PBXGroup;
 			children = (
+				598220AE2419C837009D1C17 /* README.md */,
 				5982209624190FE3009D1C17 /* TheGameNews */,
 				5982209524190FE3009D1C17 /* Products */,
 			);
@@ -59,6 +70,9 @@
 				5982209724190FE3009D1C17 /* AppDelegate.swift */,
 				5982209924190FE3009D1C17 /* SceneDelegate.swift */,
 				5982209B24190FE3009D1C17 /* ContentView.swift */,
+				598220B62419E088009D1C17 /* ListItem.swift */,
+				598220AB2419C529009D1C17 /* WebCrawler.swift */,
+				598220B42419CE7F009D1C17 /* WebView.swift */,
 				5982209D24190FE4009D1C17 /* Assets.xcassets */,
 				598220A224190FE4009D1C17 /* LaunchScreen.storyboard */,
 				598220A524190FE4009D1C17 /* Info.plist */,
@@ -91,6 +105,9 @@
 			dependencies = (
 			);
 			name = TheGameNews;
+			packageProductDependencies = (
+				598220B22419C92C009D1C17 /* Kanna */,
+			);
 			productName = TheGameNews;
 			productReference = 5982209424190FE3009D1C17 /* TheGameNews.app */;
 			productType = "com.apple.product-type.application";
@@ -119,6 +136,9 @@
 				Base,
 			);
 			mainGroup = 5982208B24190FE3009D1C17;
+			packageReferences = (
+				598220B12419C92C009D1C17 /* XCRemoteSwiftPackageReference "Kanna" */,
+			);
 			productRefGroup = 5982209524190FE3009D1C17 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -135,6 +155,7 @@
 			files = (
 				598220A424190FE4009D1C17 /* LaunchScreen.storyboard in Resources */,
 				598220A124190FE4009D1C17 /* Preview Assets.xcassets in Resources */,
+				598220B02419C837009D1C17 /* README.md in Resources */,
 				5982209E24190FE4009D1C17 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,7 +167,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				598220B72419E088009D1C17 /* ListItem.swift in Sources */,
 				5982209824190FE3009D1C17 /* AppDelegate.swift in Sources */,
+				598220B52419CE7F009D1C17 /* WebView.swift in Sources */,
+				598220AC2419C529009D1C17 /* WebCrawler.swift in Sources */,
 				5982209A24190FE3009D1C17 /* SceneDelegate.swift in Sources */,
 				5982209C24190FE3009D1C17 /* ContentView.swift in Sources */,
 			);
@@ -288,6 +312,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TheGameNews/Preview Content\"";
 				DEVELOPMENT_TEAM = DAF5ATH2GC;
 				ENABLE_PREVIEWS = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = TheGameNews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -308,6 +333,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TheGameNews/Preview Content\"";
 				DEVELOPMENT_TEAM = DAF5ATH2GC;
 				ENABLE_PREVIEWS = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = TheGameNews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -342,6 +368,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		598220B12419C92C009D1C17 /* XCRemoteSwiftPackageReference "Kanna" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tid-kijyun/Kanna.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		598220B22419C92C009D1C17 /* Kanna */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 598220B12419C92C009D1C17 /* XCRemoteSwiftPackageReference "Kanna" */;
+			productName = Kanna;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5982208C24190FE3009D1C17 /* Project object */;
 }
