@@ -38,14 +38,10 @@ class ImageLoader: ObservableObject {
             .handleEvents(receiveSubscription: { [unowned self] _ in self.onStart() },
                           receiveOutput: { [unowned self] in self.cache($0) },
                           receiveCompletion: { [unowned self] _ in self.onFinish() },
-                          receiveCancel: { [unowned self] in self.onFinish() })
+                          receiveCancel: { /*[unowned self] in self.onFinish()*/ }) // why crach
             .subscribe(on: Self.imageProcessingQueue)
             .receive(on: DispatchQueue.main)
             .assign(to: \.image, on: self)
-		print("aaaaA")
-		dump(URLSession.shared.dataTaskPublisher(for: url)
-		.map { UIImage(data: $0.data) })
-		print("aaaaa")
     }
     
     func cancel() {
