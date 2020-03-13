@@ -26,6 +26,7 @@
 		59822112241A2929009D1C17 /* libxmlHTMLDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5982210D241A2929009D1C17 /* libxmlHTMLDocument.swift */; };
 		59822114241A4401009D1C17 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59822113241A4401009D1C17 /* ListItem.swift */; };
 		598FDC9A241B2C420030F0DA /* ItemsInList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598FDC99241B2C420030F0DA /* ItemsInList.swift */; };
+		598FDC9E241B918A0030F0DA /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598FDC9D241B918A0030F0DA /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		5982210D241A2929009D1C17 /* libxmlHTMLDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = libxmlHTMLDocument.swift; sourceTree = "<group>"; };
 		59822113241A4401009D1C17 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		598FDC99241B2C420030F0DA /* ItemsInList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsInList.swift; sourceTree = "<group>"; };
+		598FDC9D241B918A0030F0DA /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				5982210D241A2929009D1C17 /* libxmlHTMLDocument.swift */,
 				5982210A241A2929009D1C17 /* libxmlHTMLNode.swift */,
 				5982210B241A2929009D1C17 /* libxmlParserOption.swift */,
+				598FDC9D241B918A0030F0DA /* SwiftyJSON.swift */,
 				598220ED241A254B009D1C17 /* Modules */,
 				5982209F24190FE4009D1C17 /* Preview Content */,
 			);
@@ -225,6 +228,7 @@
 				598FDC9A241B2C420030F0DA /* ItemsInList.swift in Sources */,
 				59822114241A4401009D1C17 /* ListItem.swift in Sources */,
 				5982209C24190FE3009D1C17 /* ContentView.swift in Sources */,
+				598FDC9E241B918A0030F0DA /* SwiftyJSON.swift in Sources */,
 				59822112241A2929009D1C17 /* libxmlHTMLDocument.swift in Sources */,
 				59822108241A28EE009D1C17 /* ImageLoader.swift in Sources */,
 				59822110241A2929009D1C17 /* libxmlParserOption.swift in Sources */,
