@@ -18,8 +18,11 @@ struct ListItem: View {
 	
 	init(URLData: CrawlerResult) {
 		self.imageURL = URLData.imageLink
-		self.title = URLData.title
-		self.content = URLData.content
+		
+//		let titleBound = URLData.title.index(URLData.title.startIndex, offsetBy: URLData.title.count > 9 ? 9 : URLData.title.count - 1)
+		self.title = URLData.title //String(URLData.title[...titleBound])
+		let contentBound = URLData.content.index(URLData.content.startIndex, offsetBy: URLData.content.count > 24 ? 24 : URLData.content.count - 1)
+		self.content = String(URLData.content[...contentBound]) + (URLData.content.count > 24 ? "..." : "")
 		self.date = URLData.date
 	}
 	
@@ -28,10 +31,12 @@ struct ListItem: View {
 			VStack {
 				HStack {
 					Text(title)
+						.fontWeight(.bold)
 					Spacer()
 				}
 				HStack {
 					Text(content)
+						.font(.system(size: 15))
 					Spacer()
 				}
 				Spacer()
