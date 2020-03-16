@@ -31,12 +31,13 @@ class WebCrawler: ObservableObject{
 	
 	private static let imageProcessingQueue = DispatchQueue(label: "image-processing")
 	
-	
+	private let domain: String
 	
 	
 	init(url: URL = URL(string: "https://www.wowchina.com/zh-cn/news.frag?page=1")!) {
 		self.url = url
 		self.result = []
+		self.domain = "https://www.wowchina.com"
 		self.call()
 	}
 	
@@ -58,7 +59,7 @@ class WebCrawler: ObservableObject{
 					var Link: [String?] = []
 					
 					for link in doc.xpath(#"//a[@class="Link NewsBlog-link"]"#) {
-						Link += [link["href"] ?? nil]
+						Link += [self.domain + (link["href"] ?? "")]
 					}
 					
 					var imageLink: [String?] = []

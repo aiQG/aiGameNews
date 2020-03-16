@@ -12,15 +12,20 @@ struct ItemsInList: View {
 	@ObservedObject private var crawlerData = WebCrawler()
 	
 	
-    var body: some View {
-		List(crawlerData.result ?? [CrawlerResult()], id: \.id) { i in
-			ListItem(URLData: i)
+	var body: some View {
+		NavigationView {
+			List(crawlerData.result ?? [CrawlerResult()], id: \.id) { i in
+				NavigationLink(destination: WebView(request: i)){
+					ListItem(URLData: i)
+				}
+			}
+		.navigationBarTitle(Text("WoW"))
 		}
-    }
+	}
 }
 
 struct ItemsInList_Previews: PreviewProvider {
-    static var previews: some View {
-        ItemsInList()
-    }
+	static var previews: some View {
+		ItemsInList()
+	}
 }
