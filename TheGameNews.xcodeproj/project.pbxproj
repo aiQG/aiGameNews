@@ -14,7 +14,7 @@
 		5982209E24190FE4009D1C17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5982209D24190FE4009D1C17 /* Assets.xcassets */; };
 		598220A124190FE4009D1C17 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 598220A024190FE4009D1C17 /* Preview Assets.xcassets */; };
 		598220A424190FE4009D1C17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 598220A224190FE4009D1C17 /* LaunchScreen.storyboard */; };
-		598220AC2419C529009D1C17 /* WebCrawler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598220AB2419C529009D1C17 /* WebCrawler.swift */; };
+		598220AC2419C529009D1C17 /* WoWWebCrawler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598220AB2419C529009D1C17 /* WoWWebCrawler.swift */; };
 		598220B02419C837009D1C17 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 598220AE2419C837009D1C17 /* README.md */; };
 		59822106241A28EE009D1C17 /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59822103241A28EE009D1C17 /* AsyncImage.swift */; };
 		59822107241A28EE009D1C17 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59822104241A28EE009D1C17 /* ImageCache.swift */; };
@@ -27,6 +27,7 @@
 		598FDCA6241B99F70030F0DA /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598FDCA5241B99F70030F0DA /* ListItem.swift */; };
 		598FDCA8241B9A030030F0DA /* ItemsInList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598FDCA7241B9A030030F0DA /* ItemsInList.swift */; };
 		59E3B8A0242071FD0055473F /* WoWNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E3B89F242071FD0055473F /* WoWNews.swift */; };
+		59E3B8A22420EC090055473F /* CrawlerResultStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E3B8A12420EC090055473F /* CrawlerResultStruct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +40,7 @@
 		598220A024190FE4009D1C17 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		598220A324190FE4009D1C17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		598220A524190FE4009D1C17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		598220AB2419C529009D1C17 /* WebCrawler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebCrawler.swift; sourceTree = "<group>"; };
+		598220AB2419C529009D1C17 /* WoWWebCrawler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoWWebCrawler.swift; sourceTree = "<group>"; };
 		598220AE2419C837009D1C17 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		598220CB241A1FD0009D1C17 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = ../../../usr/lib/libxml2.2.dylib; sourceTree = "<group>"; };
 		598220CF241A204D009D1C17 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
@@ -56,6 +57,7 @@
 		598FDCA5241B99F70030F0DA /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		598FDCA7241B9A030030F0DA /* ItemsInList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsInList.swift; sourceTree = "<group>"; };
 		59E3B89F242071FD0055473F /* WoWNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoWNews.swift; sourceTree = "<group>"; };
+		59E3B8A12420EC090055473F /* CrawlerResultStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrawlerResultStruct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +96,10 @@
 				5982209924190FE3009D1C17 /* SceneDelegate.swift */,
 				5982209B24190FE3009D1C17 /* ContentView.swift */,
 				59E3B89F242071FD0055473F /* WoWNews.swift */,
-				598220AB2419C529009D1C17 /* WebCrawler.swift */,
+				598220AB2419C529009D1C17 /* WoWWebCrawler.swift */,
 				598FDCA7241B9A030030F0DA /* ItemsInList.swift */,
 				598FDCA5241B99F70030F0DA /* ListItem.swift */,
+				59E3B8A12420EC090055473F /* CrawlerResultStruct.swift */,
 				5973A050241F7F4900AF1B83 /* WebView.swift */,
 				59822103241A28EE009D1C17 /* AsyncImage.swift */,
 				59822104241A28EE009D1C17 /* ImageCache.swift */,
@@ -221,7 +224,7 @@
 				598FDCA8241B9A030030F0DA /* ItemsInList.swift in Sources */,
 				59E3B8A0242071FD0055473F /* WoWNews.swift in Sources */,
 				5982210F241A2929009D1C17 /* libxmlHTMLNode.swift in Sources */,
-				598220AC2419C529009D1C17 /* WebCrawler.swift in Sources */,
+				598220AC2419C529009D1C17 /* WoWWebCrawler.swift in Sources */,
 				598FDCA6241B99F70030F0DA /* ListItem.swift in Sources */,
 				59822106241A28EE009D1C17 /* AsyncImage.swift in Sources */,
 				5973A051241F7F4900AF1B83 /* WebView.swift in Sources */,
@@ -232,6 +235,7 @@
 				59822112241A2929009D1C17 /* libxmlHTMLDocument.swift in Sources */,
 				59822108241A28EE009D1C17 /* ImageLoader.swift in Sources */,
 				59822110241A2929009D1C17 /* libxmlParserOption.swift in Sources */,
+				59E3B8A22420EC090055473F /* CrawlerResultStruct.swift in Sources */,
 				5982210E241A2929009D1C17 /* Kanna.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

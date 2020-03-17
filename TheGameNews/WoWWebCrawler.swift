@@ -11,17 +11,7 @@ import Foundation
 //import Kanna
 import Combine
 
-struct CrawlerResult: Identifiable {
-	var id: Int = -1
-	var link: String = "https://aiqg.vip"
-	var imageLink: String = "https://raw.githubusercontent.com/aiQG/aiQG.github.io/master/assets/images/blacktocat.png"
-	var title: String = "NULL"
-	var content: String = "null"
-	var date: String = "***"
-}
-
-
-class WebCrawler: ObservableObject{
+class WoWWebCrawler: ObservableObject{
 	var url: URL
 	// (ID, Link, Image, Title, Content, Date)
 	@Published var result: [CrawlerResult]?

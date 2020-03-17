@@ -10,25 +10,25 @@ import SwiftUI
 import WebKit
 
 struct WebView : UIViewRepresentable {
-      
-    var request: CrawlerResult
+	
+	var request: CrawlerResult
 	
 	init(request: CrawlerResult = CrawlerResult()) {
 		self.request = request
 	}
-
-    func makeUIView(context: Context) -> WKWebView  {
-        return WKWebView()
-    }
-
-    func updateUIView(_ uiView: WKWebView, context: Context) {
+	
+	func makeUIView(context: Context) -> WKWebView  {
+		return WKWebView()
+	}
+	
+	func updateUIView(_ uiView: WKWebView, context: Context) {
 		uiView.load(URLRequest(url: URL(string: request.link) ?? URL(string: CrawlerResult().link)! ))
-    }
-      
+	}
+	
 }
 
 struct WebView_Previews: PreviewProvider {
-    static var previews: some View {
-        WebView()
-    }
+	static var previews: some View {
+		WebView()
+	}
 }

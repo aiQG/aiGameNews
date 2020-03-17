@@ -9,10 +9,10 @@
 import SwiftUI
 
 struct ItemsInList: View {
-	@ObservedObject private var crawlerData = WebCrawler() // 放入要爬的页数
+	@ObservedObject private var crawlerData = WoWWebCrawler() // 放入要爬的页数
 	
 	init(page: Int = 1) {
-		self.crawlerData = WebCrawler(url: URL(string: "https://www.wowchina.com/zh-cn/news.frag?page=\(page)")!)
+		self.crawlerData = WoWWebCrawler(url: URL(string: "https://www.wowchina.com/zh-cn/news.frag?page=\(page)")!)
 	}
 	
 	var body: some View {
@@ -25,7 +25,7 @@ struct ItemsInList: View {
 				}
 				.navigationBarTitle(Text("WoW"))
 			}
-
+			
 		}
 	}
 }
@@ -33,6 +33,6 @@ struct ItemsInList: View {
 struct ItemsInList_Previews: PreviewProvider {
 	static var previews: some View {
 		ItemsInList(page: 1)
-			//.environment(\.colorScheme, .dark)
+		//.environment(\.colorScheme, .dark)
 	}
 }
