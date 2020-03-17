@@ -54,7 +54,6 @@
 		5982210D241A2929009D1C17 /* libxmlHTMLDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = libxmlHTMLDocument.swift; sourceTree = "<group>"; };
 		598FDCA5241B99F70030F0DA /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		598FDCA7241B9A030030F0DA /* ItemsInList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsInList.swift; sourceTree = "<group>"; };
-		598FDCA9241C7CBA0030F0DA /* TODO.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +71,6 @@
 			isa = PBXGroup;
 			children = (
 				598220AE2419C837009D1C17 /* README.md */,
-				598FDCA9241C7CBA0030F0DA /* TODO.md */,
 				5982209624190FE3009D1C17 /* TheGameNews */,
 				5982209524190FE3009D1C17 /* Products */,
 				598220CA241A1FD0009D1C17 /* Frameworks */,
