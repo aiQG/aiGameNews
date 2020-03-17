@@ -85,10 +85,11 @@ class WebCrawler: ObservableObject{
 						date += [d.content ?? nil]
 					}
 					// finally get tuples
+					
 					for i in 0..<max(Link.count, imageLink.count, title.count, content.count, date.count) {
 						output!.append(
-							CrawlerResult(id: i, link: Link[i] ?? "https://aiqg.vip",
-										  imageLink: imageLink[i] ?? "https://raw.githubusercontent.com/aiQG/aiQG.github.io/master/assets/images/blacktocat.png",
+							CrawlerResult(id: i, link: Link.count > i ? Link[i]! : "https://aiqg.vip",
+										  imageLink: imageLink.count > i ? imageLink[i]! : "https://raw.githubusercontent.com/aiQG/aiQG.github.io/master/assets/images/blacktocat.png",
 										  title: title[i] ?? "NULL",
 										  content: content[i] ?? "null",
 										  date: date[i] ?? "**"))
