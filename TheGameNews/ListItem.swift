@@ -11,7 +11,7 @@ import SwiftUI
 struct ListItem: View {
 	let cache = TemporaryImageCache()
 	
-	private var imageURL = "http://cms.cnc.blzstatic.cn/cms/blog_thumbnail/t3/T30PTL0IJG3N1536731539320.jpg"
+	private var imageURL = "https://raw.githubusercontent.com/aiQG/aiQG.github.io/master/assets/images/blacktocat.png"
 	private var title = "NULL"
 	private var content = "null"
 	private var date = "*"

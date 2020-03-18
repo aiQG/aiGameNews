@@ -13,7 +13,7 @@ struct WoWNews: View {
 	
 	var body: some View {
 		VStack {
-			ItemsInList(page: page)
+			WoWItemsInList(page: page)
 			HStack {
 				Button(action: {
 					self.page = self.page > 2 ? self.page - 1 : 2

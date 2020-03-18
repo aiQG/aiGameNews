@@ -12,7 +12,8 @@ struct ContentView: View {
 	
 	var body: some View {
 		VStack {
-			WoWNews()
+//			WoWNews()
+			EFTItemsInList()
 		}
 	}
 }

@@ -1,17 +1,17 @@
 //
-//  WebCrawler.swift
+//  EFTWebCrawler.swift.swift
 //  TheGameNews
 //
-//  Created by 周测 on 3/12/20.
+//  Created by 周测 on 3/17/20.
 //  Copyright © 2020 aiQG_. All rights reserved.
 //
 
-//取得基本信息
 import Foundation
 //import Kanna
 import Combine
 
-class WoWWebCrawler: ObservableObject{
+
+class EFTWebCrawler: ObservableObject{
 	var url: URL
 	// (ID, Link, Image, Title, Content, Date)
 	@Published var result: [CrawlerResult]?
@@ -19,15 +19,15 @@ class WoWWebCrawler: ObservableObject{
 	
 	private var cancellable: AnyCancellable?
 	
-	private static let imageProcessingQueue = DispatchQueue(label: "WoW-image-processing")
+	private static let imageProcessingQueue = DispatchQueue(label: "EFT-image-processing")
 	
 	private let domain: String
 	
 	
-	init(url: URL = URL(string: "https://www.wowchina.com/zh-cn/news.frag?page=1")!) {
+	init(url: URL = URL(string: "https://www.escapefromtarkov.com/news/page/0?page=0")!) {
 		self.url = url
 		self.result = []
-		self.domain = "https://www.wowchina.com"
+		self.domain = "https://www.escapefromtarkov.com"
 		self.call()
 	}
 	
@@ -39,6 +39,7 @@ class WoWWebCrawler: ObservableObject{
 				// check state
 				if let state = $0.response as? HTTPURLResponse {
 					if state.statusCode != 200 {
+						//需要代理
 						return output
 					}
 				} else {
@@ -48,32 +49,30 @@ class WoWWebCrawler: ObservableObject{
 				if let doc = try? HTML(html: html, encoding: .utf8) {
 					var Link: [String?] = []
 					
-					for link in doc.xpath(#"//a[@class="Link NewsBlog-link"]"#) {
+					for link in doc.xpath(#"//div[@class="read button"]/a"#) {
 						Link += [self.domain + (link["href"] ?? "")]
 					}
-					
+
 					var imageLink: [String?] = []
-					for image in doc.xpath(#"//div[@class="Tile-bg"]"#) {
-						let str = image["style"] ?? ""
-						let temp = str[str.range(of: "\"//[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]\"", options: .regularExpression)!]
-						
-						imageLink += ["http:" + temp.replacingOccurrences(of: "\"", with: "")]
+					for image in doc.xpath(#"//img[@itemprop="thumbnailUrl"]"#) {
+						imageLink += [self.domain + (image["src"] ?? "")]
 					}
 					
 					var title: [String?] = []
-					for tt in doc.xpath(#"//div[@class="NewsBlog-title"]"#) {
+					for tt in doc.xpath(#"//div[@class="headtext"]/a[@data-target="modal"]"#) {
 						title += [tt.content ?? nil]
 					}
 					
 					var content: [String?] = []
-					for c in doc.xpath(#"//p[@class="NewsBlog-desc color-beige-medium font-size-xSmall"]"#) {
+					for c in doc.xpath(#"//div[@class="description"]"#) {
 						content += [c.content ?? nil]
 					}
 					
 					var date: [String?] = []
-					for d in doc.xpath(#"//div[@class="NewsBlog-date LocalizedDateMount"]"#) {
+					for d in doc.xpath(#"//div[@class="headtext"]/span"#) {
 						date += [d.content ?? nil]
 					}
+					
 					// finally get tuples
 					
 					for i in 0..<max(Link.count, imageLink.count, title.count, content.count, date.count) {

@@ -8,8 +8,8 @@
 
 import SwiftUI
 
-struct ItemsInList: View {
-	@ObservedObject private var crawlerData = WoWWebCrawler() // 放入要爬的页数
+struct WoWItemsInList: View {
+	@ObservedObject private var crawlerData = WoWWebCrawler() 
 	
 	init(page: Int = 1) {
 		self.crawlerData = WoWWebCrawler(url: URL(string: "https://www.wowchina.com/zh-cn/news.frag?page=\(page)")!)
@@ -30,9 +30,9 @@ struct ItemsInList: View {
 	}
 }
 
-struct ItemsInList_Previews: PreviewProvider {
+struct WoWItemsInList_Previews: PreviewProvider {
 	static var previews: some View {
-		ItemsInList(page: 1)
+		WoWItemsInList(page: 1)
 		//.environment(\.colorScheme, .dark)
 	}
 }
