@@ -13,17 +13,12 @@ struct EFTItemsInList: View {
 	
 	
 	var body: some View {
-		VStack {
-			NavigationView {
-				List(crawlerData.result ?? [CrawlerResult()], id: \.id) { i in
-					NavigationLink(destination: WebView(request: i)){
-						ListItem(URLData: i)
-					}
-				}
-				.navigationBarTitle(Text("EFT"))
+		List(crawlerData.result ?? [CrawlerResult()], id: \.id) { i in
+			NavigationLink(destination: WebView(request: i)){
+				ListItem(URLData: i)
 			}
-			
 		}
+		.navigationBarTitle(Text("EFT"))
 	}
 }
 

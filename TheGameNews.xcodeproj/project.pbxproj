@@ -30,6 +30,7 @@
 		59E3B8A22420EC090055473F /* CrawlerResultStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E3B8A12420EC090055473F /* CrawlerResultStruct.swift */; };
 		59E3B8A42420ED250055473F /* EFTWebCrawler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E3B8A32420ED240055473F /* EFTWebCrawler.swift */; };
 		59E3B8A62421B4FE0055473F /* EFTItemsInList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E3B8A52421B4FE0055473F /* EFTItemsInList.swift */; };
+		59E3B8A82421C0E10055473F /* EFTNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E3B8A72421C0E10055473F /* EFTNews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		59E3B8A12420EC090055473F /* CrawlerResultStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrawlerResultStruct.swift; sourceTree = "<group>"; };
 		59E3B8A32420ED240055473F /* EFTWebCrawler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EFTWebCrawler.swift; sourceTree = "<group>"; };
 		59E3B8A52421B4FE0055473F /* EFTItemsInList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EFTItemsInList.swift; sourceTree = "<group>"; };
+		59E3B8A72421C0E10055473F /* EFTNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EFTNews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +101,12 @@
 				5982209724190FE3009D1C17 /* AppDelegate.swift */,
 				5982209924190FE3009D1C17 /* SceneDelegate.swift */,
 				5982209B24190FE3009D1C17 /* ContentView.swift */,
-				59E3B89F242071FD0055473F /* WoWNews.swift */,
-				59E3B8A32420ED240055473F /* EFTWebCrawler.swift */,
+				59E3B8A72421C0E10055473F /* EFTNews.swift */,
 				59E3B8A52421B4FE0055473F /* EFTItemsInList.swift */,
-				598220AB2419C529009D1C17 /* WoWWebCrawler.swift */,
+				59E3B8A32420ED240055473F /* EFTWebCrawler.swift */,
+				59E3B89F242071FD0055473F /* WoWNews.swift */,
 				598FDCA7241B9A030030F0DA /* WoWItemsInList.swift */,
+				598220AB2419C529009D1C17 /* WoWWebCrawler.swift */,
 				598FDCA5241B99F70030F0DA /* ListItem.swift */,
 				59E3B8A12420EC090055473F /* CrawlerResultStruct.swift */,
 				5973A050241F7F4900AF1B83 /* WebView.swift */,
@@ -226,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59E3B8A82421C0E10055473F /* EFTNews.swift in Sources */,
 				5982209824190FE3009D1C17 /* AppDelegate.swift in Sources */,
 				598FDCA8241B9A030030F0DA /* WoWItemsInList.swift in Sources */,
 				59E3B8A0242071FD0055473F /* WoWNews.swift in Sources */,

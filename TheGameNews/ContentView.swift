@@ -11,9 +11,22 @@ import SwiftUI
 struct ContentView: View {
 	
 	var body: some View {
-		VStack {
-//			WoWNews()
-			EFTItemsInList()
+		NavigationView {
+			List {
+				NavigationLink(destination: WoWNews()) {
+					Image("WoWicon")
+						.resizable()
+						.frame(width: 30, height: 30)
+					Text("魔兽世界(WoW)")
+				}
+				NavigationLink(destination: EFTNews()) {
+					Image("EFTicon")
+						.resizable()
+						.frame(width: 30, height: 30)
+					Text("逃离塔科夫(EFT) (需要代理)")
+				}
+			}
+			.navigationBarTitle(Text("Content"))
 		}
 	}
 }

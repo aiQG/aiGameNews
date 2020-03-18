@@ -52,7 +52,7 @@ class EFTWebCrawler: ObservableObject{
 					for link in doc.xpath(#"//div[@class="read button"]/a"#) {
 						Link += [self.domain + (link["href"] ?? "")]
 					}
-
+					
 					var imageLink: [String?] = []
 					for image in doc.xpath(#"//img[@itemprop="thumbnailUrl"]"#) {
 						imageLink += [self.domain + (image["src"] ?? "")]
