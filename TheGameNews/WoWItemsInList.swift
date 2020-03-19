@@ -21,7 +21,7 @@ struct WoWItemsInList: View {
 				ListItem(URLData: i)
 			}
 		}
-		.navigationBarTitle(Text("WoW"))
+		.navigationBarTitle(Text("WoW"), displayMode: .inline)
 	}
 }
 

@@ -18,7 +18,7 @@ struct EFTItemsInList: View {
 				ListItem(URLData: i)
 			}
 		}
-		.navigationBarTitle(Text("EFT"))
+		.navigationBarTitle(Text("EFT"), displayMode: .inline)
 	}
 }
 
