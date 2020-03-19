@@ -47,6 +47,7 @@ struct ListItem: View {
 			}
 			Spacer()
 			AsyncImage(url: URL(string: imageURL)!, cache: self.cache, placeholder: Text("Loading ..."), configuration: { $0.resizable() })
+				.aspectRatio(contentMode: .fill)
 				.frame(width: UIScreen.main.bounds.width / 9 * 2, height: UIScreen.main.bounds.width / 9 * 2)
 				.cornerRadius(10)
 				.overlay(
