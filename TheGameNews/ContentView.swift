@@ -25,6 +25,12 @@ struct ContentView: View {
 						.frame(width: 30, height: 30)
 					Text("逃离塔科夫(EFT) (需要代理)")
 				}
+				NavigationLink(destination: YDNews()) {
+					Image("YDicon")
+						.resizable()
+						.frame(width: 30, height: 30)
+					Text("云顶之弈")
+				}
 			}
 			.navigationBarTitle(Text("Content"))
 		}
