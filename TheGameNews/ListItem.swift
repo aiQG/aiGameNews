@@ -20,9 +20,13 @@ struct ListItem: View {
 		self.imageURL = URLData.imageLink
 		
 		self.title = URLData.title //String(URLData.title[...titleBound])
+		self.date = URLData.date
+		guard URLData.content.count > 0 else {
+			self.content = ""
+			return
+		}
 		let contentBound = URLData.content.index(URLData.content.startIndex, offsetBy: URLData.content.count > 24 ? 24 : URLData.content.count - 1)
 		self.content = String(URLData.content[...contentBound]) + (URLData.content.count > 24 ? "..." : "")
-		self.date = URLData.date
 	}
 	
 	var body: some View {
