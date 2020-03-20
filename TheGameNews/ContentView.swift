@@ -16,20 +16,30 @@ struct ContentView: View {
 				NavigationLink(destination: WoWNews()) {
 					Image("WoWicon")
 						.resizable()
+						.aspectRatio(contentMode: .fit)
 						.frame(width: 30, height: 30)
 					Text("魔兽世界(WoW)")
 				}
 				NavigationLink(destination: EFTNews()) {
 					Image("EFTicon")
 						.resizable()
+						.aspectRatio(contentMode: .fit)
 						.frame(width: 30, height: 30)
 					Text("逃离塔科夫(EFT) (需要代理)")
 				}
 				NavigationLink(destination: YDNews()) {
 					Image("YDicon")
 						.resizable()
+						.aspectRatio(contentMode: .fit)
 						.frame(width: 30, height: 30)
 					Text("云顶之弈")
+				}
+				NavigationLink(destination: EVENews()) {
+					Image("EVEicon")
+						.resizable()
+						.aspectRatio(contentMode: .fit)
+						.frame(width: 30, height: 30)
+					Text("星战前夜(EVE Online)")
 				}
 			}
 			.navigationBarTitle(Text("Content"))
