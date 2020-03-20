@@ -19,11 +19,11 @@ struct YDItemsInList: View {
 		VStack{
 			if crawlerData.result?.count == 0 {
 				Text("没有了")
-			} else {
-				List(crawlerData.result ?? [CrawlerResult()], id: \.id) { i in
-					NavigationLink(destination: WebView(request: i)){
-						YDListItem(URLData: i)
-					}
+			}
+			List(crawlerData.result ?? [CrawlerResult()], id: \.id) { i in
+				NavigationLink(destination: WebView(request: i)){
+					YDListItem(URLData: i)
+					
 				}
 			}
 		}

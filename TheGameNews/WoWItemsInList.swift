@@ -20,10 +20,10 @@ struct WoWItemsInList: View {
 			if crawlerData.result?.count == 0 {
 				Text("没有了")
 			}
-				List(crawlerData.result ?? [CrawlerResult()], id: \.id) { i in
-					NavigationLink(destination: WebView(request: i)){
-						ListItem(URLData: i)
-					}
+			List(crawlerData.result ?? [CrawlerResult()], id: \.id) { i in
+				NavigationLink(destination: WebView(request: i)){
+					ListItem(URLData: i)
+				}
 				
 			}
 		}
