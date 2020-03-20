@@ -1,5 +1,5 @@
 //
-//  WOWSListItem.swift
+//  WOTListItem.swift
 //  TheGameNews
 //
 //  Created by 周测 on 3/20/20.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct WOWSListItem: View {
+struct WOTListItem: View {
 	let cache = TemporaryImageCache()
 	
 	private var title = "NULL"
@@ -39,8 +39,8 @@ struct WOWSListItem: View {
 	}
 }
 
-struct WOWSListItem_Previews: PreviewProvider {
+struct WOTListItem_Previews: PreviewProvider {
 	static var previews: some View {
-		WOWSListItem(URLData: CrawlerResult())
+		WOTListItem(URLData: CrawlerResult())
 	}
 }

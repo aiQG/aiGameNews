@@ -1,5 +1,5 @@
 //
-//  EVENews.swift
+//  WOTNews.swift
 //  TheGameNews
 //
 //  Created by 周测 on 3/20/20.
@@ -8,12 +8,12 @@
 
 import SwiftUI
 
-struct EVENews: View {
+struct WOTNews: View {
 	@State private var page = 1
 	
 	var body: some View {
 		VStack {
-			EVEItemsInList(page: page)
+			WOTItemsInList(page: page)
 			Spacer()
 			HStack {
 				Button(action: {
@@ -38,8 +38,8 @@ struct EVENews: View {
 	}
 }
 
-struct EVENews_Previews: PreviewProvider {
+struct WOTNews_Previews: PreviewProvider {
 	static var previews: some View {
-		EVENews()
+		WOTNews()
 	}
 }

@@ -52,7 +52,7 @@ class EVEWebCrawler: ObservableObject{
 					for i in doc.xpath(#"//ul[@class="list"]/li/a"#) {
 						Link += [i["href"] ?? ""]
 					}
-
+					
 					var imageLink: [String?] = []
 					for image in doc.xpath(#"//ul[@class="list"]/li/a/span[@class="kindname"]"#) {
 						switch image["data-name"] {
@@ -68,7 +68,7 @@ class EVEWebCrawler: ObservableObject{
 							imageLink += ["EVEicon"]
 						}
 					}
-
+					
 					var title: [String?] = []
 					for i in doc.xpath(#"//ul[@class="list"]/li/a/p[@class="lside"]/span[@class="title"]"#){
 						title += [i.content ?? ""]
@@ -83,15 +83,15 @@ class EVEWebCrawler: ObservableObject{
 					for d in doc.xpath(#"//ul[@class="list"]/li/a/p[@class="lside"]/span[@class="time"]"#) {
 						date += [d.content ?? nil]
 					}
-
+					
 					// finally get tuples
 					for i in 0..<max(Link.count, imageLink.count, title.count, content.count, date.count) {
 						output!.append(
-						CrawlerResult(id: i, link: Link.count > i ? Link[i]! : "https://aiqg.vip",
-									  imageLink: imageLink.count > i ? imageLink[i]! : "https://raw.githubusercontent.com/aiQG/aiQG.github.io/master/assets/images/blacktocat.png",
-									  title: title.count > i ? title[i]! : "NULL",
-									  content: content.count > i ? content[i]! : "null",
-									  date: date.count > i ? date[i]! : "**"))
+							CrawlerResult(id: i, link: Link.count > i ? Link[i]! : "https://aiqg.vip",
+										  imageLink: imageLink.count > i ? imageLink[i]! : "https://raw.githubusercontent.com/aiQG/aiQG.github.io/master/assets/images/blacktocat.png",
+										  title: title.count > i ? title[i]! : "NULL",
+										  content: content.count > i ? content[i]! : "null",
+										  date: date.count > i ? date[i]! : "**"))
 					}
 				}
 				return output

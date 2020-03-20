@@ -1,5 +1,5 @@
 //
-//  WOWSWebCrawler.swift
+//  WOTWebCrawler.swift
 //  TheGameNews
 //
 //  Created by 周测 on 3/20/20.
@@ -11,7 +11,7 @@ import Foundation
 import Combine
 
 
-class WOWSWebCrawler: ObservableObject{
+class WOTWebCrawler: ObservableObject{
 	var url: URL
 	// (ID, Link, Image, Title, Content, Date)
 	@Published var result: [CrawlerResult]?
@@ -19,15 +19,15 @@ class WOWSWebCrawler: ObservableObject{
 	
 	private var cancellable: AnyCancellable?
 	
-	private static let imageProcessingQueue = DispatchQueue(label: "WOWS-image-processing")
+	private static let imageProcessingQueue = DispatchQueue(label: "WOT-image-processing")
 	
 	private let domain: String
 	
 	
-	init(url: URL = URL(string: "http://wows.kongzhong.com/2018wows/newlist/index_1.html")!) {
+	init(url: URL = URL(string: "http://wot.kongzhong.com/zixun/new_1.html")!) {
 		self.url = url
 		self.result = []
-		self.domain = "http://wows.kongzhong.com"
+		self.domain = "http://wot.kongzhong.com"
 		self.call()
 	}
 	
@@ -46,7 +46,10 @@ class WOWSWebCrawler: ObservableObject{
 					return output
 				}
 				let html = $0.data
-				if let doc = try? HTML(html: html, encoding: .utf8) {
+				// gb2312编码
+				let cfEncoding = CFStringEncodings.GB_18030_2000
+				let encoding = CFStringConvertEncodingToNSStringEncoding(CFStringEncoding(cfEncoding.rawValue))
+				if let doc = try? HTML(html: html, encoding: .init(rawValue: encoding)) {
 					var Link: [String?] = []
 					for link in doc.xpath(#"//ul[@class="newsList"]/li/a"#) {
 						Link += [link["href"] ?? ""]

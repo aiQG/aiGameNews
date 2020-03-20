@@ -77,11 +77,11 @@ class EFTWebCrawler: ObservableObject{
 					
 					for i in 0..<max(Link.count, imageLink.count, title.count, content.count, date.count) {
 						output!.append(
-						CrawlerResult(id: i, link: Link.count > i ? Link[i]! : "https://aiqg.vip",
-									  imageLink: imageLink.count > i ? imageLink[i]! : "https://raw.githubusercontent.com/aiQG/aiQG.github.io/master/assets/images/blacktocat.png",
-									  title: title.count > i ? title[i]! : "NULL",
-									  content: content.count > i ? content[i]! : "null",
-									  date: date.count > i ? date[i]! : "**"))
+							CrawlerResult(id: i, link: Link.count > i ? Link[i]! : "https://aiqg.vip",
+										  imageLink: imageLink.count > i ? imageLink[i]! : "https://raw.githubusercontent.com/aiQG/aiQG.github.io/master/assets/images/blacktocat.png",
+										  title: title.count > i ? title[i]! : "NULL",
+										  content: content.count > i ? content[i]! : "null",
+										  date: date.count > i ? date[i]! : "**"))
 					}
 				}
 				return output

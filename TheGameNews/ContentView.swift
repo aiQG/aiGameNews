@@ -41,6 +41,20 @@ struct ContentView: View {
 						.frame(width: 30, height: 30)
 					Text("星战前夜(EVE Online)")
 				}
+				NavigationLink(destination: WOWSNews()) {
+					Image("WOWSicon")
+						.resizable()
+						.aspectRatio(contentMode: .fit)
+						.frame(width: 30, height: 30)
+					Text("战舰世界(WOWS)")
+				}
+				NavigationLink(destination: WOTNews()) {
+					Image("WOTicon")
+						.resizable()
+						.aspectRatio(contentMode: .fit)
+						.frame(width: 30, height: 30)
+					Text("坦克世界(WOT)")
+				}
 			}
 			.navigationBarTitle(Text("Content"))
 		}

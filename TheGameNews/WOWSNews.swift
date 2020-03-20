@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct WOWSNews: View {
-    @State private var page = 1
+	@State private var page = 1
 	
 	var body: some View {
 		VStack {
@@ -39,7 +39,7 @@ struct WOWSNews: View {
 }
 
 struct WOWSNews_Previews: PreviewProvider {
-    static var previews: some View {
-        WOWSNews()
-    }
+	static var previews: some View {
+		WOWSNews()
+	}
 }

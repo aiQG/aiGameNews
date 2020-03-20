@@ -56,27 +56,27 @@ class YDWebCrawler: ObservableObject{
 					}
 					
 					let imageLink: [String?] = []
-//					for image in doc.xpath(#"//img[@itemprop="thumbnailUrl"]"#) {
-//						imageLink += [self.domain + (image["src"] ?? "")]
-//					}
-//
+					//					for image in doc.xpath(#"//img[@itemprop="thumbnailUrl"]"#) {
+					//						imageLink += [self.domain + (image["src"] ?? "")]
+					//					}
+					//
 					var title: [String?] = []
 					for tt in doc.xpath(#"//a[@class="item-href"]"#) {
 						title += [tt.content ?? nil]
 					}
-
+					
 					let content: [String?] = []
-//					for c in doc.xpath(#"//div[@class="description"]"#) {
-//						content += [c.content ?? nil]
-//					}
-//
+					//					for c in doc.xpath(#"//div[@class="description"]"#) {
+					//						content += [c.content ?? nil]
+					//					}
+					//
 					var date: [String?] = []
 					for d in doc.xpath(#"//span[@class="item-time"]"#) {
 						date += [d.content ?? nil]
 					}
-
+					
 					// finally get tuples
-
+					
 					for i in 0..<max(Link.count, imageLink.count, title.count, content.count, date.count) {
 						output!.append(
 							CrawlerResult(id: i, link: Link.count > i ? Link[i]! : "https://aiqg.vip",

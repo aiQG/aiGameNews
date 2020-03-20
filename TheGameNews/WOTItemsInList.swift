@@ -1,5 +1,5 @@
 //
-//  WOWSItemsInList.swift
+//  WOTItemsInList.swift
 //  TheGameNews
 //
 //  Created by 周测 on 3/20/20.
@@ -8,11 +8,11 @@
 
 import SwiftUI
 
-struct WOWSItemsInList: View {
-	@ObservedObject private var crawlerData = WOWSWebCrawler()
+struct WOTItemsInList: View {
+	@ObservedObject private var crawlerData = WOTWebCrawler()
 	
 	init(page: Int = 1) {
-		self.crawlerData = WOWSWebCrawler(url: URL(string: "http://wows.kongzhong.com/2018wows/newlist/index_\(page).html")!)
+		self.crawlerData = WOTWebCrawler(url: URL(string: "http://wot.kongzhong.com/zixun/new_\(page).html")!)
 	}
 	
 	var body: some View {
@@ -22,16 +22,16 @@ struct WOWSItemsInList: View {
 			}
 			List(crawlerData.result ?? [CrawlerResult()], id: \.id) { i in
 				NavigationLink(destination: WebView(request: i)){
-					WOWSListItem(URLData: i)
+					WOTListItem(URLData: i)
 				}
 			}
 		}
-		.navigationBarTitle(Text("WOWS"), displayMode: .inline)
+		.navigationBarTitle(Text("WOT"), displayMode: .inline)
 	}
 }
 
-struct WOWSItemsInList_Previews: PreviewProvider {
+struct WOTItemsInList_Previews: PreviewProvider {
 	static var previews: some View {
-		WOWSItemsInList()
+		WOTItemsInList()
 	}
 }

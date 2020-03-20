@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct EVEListItem: View {
-    let cache = TemporaryImageCache()
+	let cache = TemporaryImageCache()
 	
 	private var imageURL = "https://raw.githubusercontent.com/aiQG/aiQG.github.io/master/assets/images/blacktocat.png"
 	private var title = "NULL"
@@ -51,7 +51,7 @@ struct EVEListItem: View {
 			}
 			Spacer()
 			Image(imageURL)
-			.resizable()
+				.resizable()
 				.aspectRatio(contentMode: .fit)
 				.frame(width: UIScreen.main.bounds.width / 9 * 2, height: UIScreen.main.bounds.width / 9 * 2)
 				.cornerRadius(10)
@@ -64,7 +64,7 @@ struct EVEListItem: View {
 }
 
 struct EVEListItem_Previews: PreviewProvider {
-    static var previews: some View {
-        EVEListItem(URLData: CrawlerResult())
-    }
+	static var previews: some View {
+		EVEListItem(URLData: CrawlerResult())
+	}
 }
