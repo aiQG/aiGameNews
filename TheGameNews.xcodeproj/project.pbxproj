@@ -10,6 +10,11 @@
 		5973A051241F7F4900AF1B83 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5973A050241F7F4900AF1B83 /* WebView.swift */; };
 		597BEDA924247432005053E0 /* EVEListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597BEDA824247432005053E0 /* EVEListItem.swift */; };
 		597BEDAB24247690005053E0 /* EVENews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597BEDAA24247690005053E0 /* EVENews.swift */; };
+		597BEDAF24248080005053E0 /* WOWSWebCrawler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597BEDAE24248080005053E0 /* WOWSWebCrawler.swift */; };
+		597BEDB124248090005053E0 /* WOTWebCrawler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597BEDB024248090005053E0 /* WOTWebCrawler.swift */; };
+		597BEDB3242481C6005053E0 /* WOWSItemsInList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597BEDB2242481C6005053E0 /* WOWSItemsInList.swift */; };
+		597BEDB524248BB4005053E0 /* WOWSListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597BEDB424248BB4005053E0 /* WOWSListItem.swift */; };
+		597BEDB724248C61005053E0 /* WOWSNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597BEDB624248C61005053E0 /* WOWSNews.swift */; };
 		5982209824190FE3009D1C17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5982209724190FE3009D1C17 /* AppDelegate.swift */; };
 		5982209A24190FE3009D1C17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5982209924190FE3009D1C17 /* SceneDelegate.swift */; };
 		5982209C24190FE3009D1C17 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5982209B24190FE3009D1C17 /* ContentView.swift */; };
@@ -45,6 +50,11 @@
 		5973A050241F7F4900AF1B83 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		597BEDA824247432005053E0 /* EVEListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EVEListItem.swift; sourceTree = "<group>"; };
 		597BEDAA24247690005053E0 /* EVENews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EVENews.swift; sourceTree = "<group>"; };
+		597BEDAE24248080005053E0 /* WOWSWebCrawler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WOWSWebCrawler.swift; sourceTree = "<group>"; };
+		597BEDB024248090005053E0 /* WOTWebCrawler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WOTWebCrawler.swift; sourceTree = "<group>"; };
+		597BEDB2242481C6005053E0 /* WOWSItemsInList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WOWSItemsInList.swift; sourceTree = "<group>"; };
+		597BEDB424248BB4005053E0 /* WOWSListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WOWSListItem.swift; sourceTree = "<group>"; };
+		597BEDB624248C61005053E0 /* WOWSNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WOWSNews.swift; sourceTree = "<group>"; };
 		5982209424190FE3009D1C17 /* TheGameNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheGameNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5982209724190FE3009D1C17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5982209924190FE3009D1C17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +103,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		597BEDAC24248014005053E0 /* WOWS */ = {
+			isa = PBXGroup;
+			children = (
+				597BEDB624248C61005053E0 /* WOWSNews.swift */,
+				597BEDB2242481C6005053E0 /* WOWSItemsInList.swift */,
+				597BEDB424248BB4005053E0 /* WOWSListItem.swift */,
+				597BEDAE24248080005053E0 /* WOWSWebCrawler.swift */,
+			);
+			name = WOWS;
+			sourceTree = "<group>";
+		};
+		597BEDAD24248045005053E0 /* WOT */ = {
+			isa = PBXGroup;
+			children = (
+				597BEDB024248090005053E0 /* WOTWebCrawler.swift */,
+			);
+			name = WOT;
+			sourceTree = "<group>";
+		};
 		5982208B24190FE3009D1C17 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +146,8 @@
 				5982209724190FE3009D1C17 /* AppDelegate.swift */,
 				5982209924190FE3009D1C17 /* SceneDelegate.swift */,
 				5982209B24190FE3009D1C17 /* ContentView.swift */,
+				597BEDAD24248045005053E0 /* WOT */,
+				597BEDAC24248014005053E0 /* WOWS */,
 				59E3B8BA24244E440055473F /* EVE */,
 				59E3B8B524244DB60055473F /* YD */,
 				59E3B8B624244DDD0055473F /* EFT */,
@@ -293,8 +324,11 @@
 				59E3B8AE24233EC80055473F /* YDWebCrawler.swift in Sources */,
 				5982210F241A2929009D1C17 /* libxmlHTMLNode.swift in Sources */,
 				598220AC2419C529009D1C17 /* WoWWebCrawler.swift in Sources */,
+				597BEDB524248BB4005053E0 /* WOWSListItem.swift in Sources */,
 				598FDCA6241B99F70030F0DA /* ListItem.swift in Sources */,
+				597BEDB3242481C6005053E0 /* WOWSItemsInList.swift in Sources */,
 				59E3B8A42420ED250055473F /* EFTWebCrawler.swift in Sources */,
+				597BEDB724248C61005053E0 /* WOWSNews.swift in Sources */,
 				59E3B8B4242353880055473F /* YDNews.swift in Sources */,
 				59822106241A28EE009D1C17 /* AsyncImage.swift in Sources */,
 				5973A051241F7F4900AF1B83 /* WebView.swift in Sources */,
@@ -309,6 +343,8 @@
 				59822112241A2929009D1C17 /* libxmlHTMLDocument.swift in Sources */,
 				59822108241A28EE009D1C17 /* ImageLoader.swift in Sources */,
 				59822110241A2929009D1C17 /* libxmlParserOption.swift in Sources */,
+				597BEDB124248090005053E0 /* WOTWebCrawler.swift in Sources */,
+				597BEDAF24248080005053E0 /* WOWSWebCrawler.swift in Sources */,
 				59E3B8A62421B4FE0055473F /* EFTItemsInList.swift in Sources */,
 				59E3B8B224234F2F0055473F /* YDListItem.swift in Sources */,
 				59E3B8A22420EC090055473F /* CrawlerResultStruct.swift in Sources */,
