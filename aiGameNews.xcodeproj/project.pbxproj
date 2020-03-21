@@ -61,7 +61,7 @@
 		597BEDB824248F84005053E0 /* WOTItemsInList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WOTItemsInList.swift; sourceTree = "<group>"; };
 		597BEDBA242490C6005053E0 /* WOTListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WOTListItem.swift; sourceTree = "<group>"; };
 		597BEDBC2424919E005053E0 /* WOTNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WOTNews.swift; sourceTree = "<group>"; };
-		5982209424190FE3009D1C17 /* TheGameNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheGameNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5982209424190FE3009D1C17 /* aiGameNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aiGameNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5982209724190FE3009D1C17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5982209924190FE3009D1C17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5982209B24190FE3009D1C17 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -144,7 +144,7 @@
 		5982209524190FE3009D1C17 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5982209424190FE3009D1C17 /* TheGameNews.app */,
+				5982209424190FE3009D1C17 /* aiGameNews.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -252,9 +252,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5982209324190FE3009D1C17 /* TheGameNews */ = {
+		5982209324190FE3009D1C17 /* aiGameNews */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 598220A824190FE4009D1C17 /* Build configuration list for PBXNativeTarget "TheGameNews" */;
+			buildConfigurationList = 598220A824190FE4009D1C17 /* Build configuration list for PBXNativeTarget "aiGameNews" */;
 			buildPhases = (
 				5982209024190FE3009D1C17 /* Sources */,
 				5982209124190FE3009D1C17 /* Frameworks */,
@@ -264,11 +264,11 @@
 			);
 			dependencies = (
 			);
-			name = TheGameNews;
+			name = aiGameNews;
 			packageProductDependencies = (
 			);
 			productName = TheGameNews;
-			productReference = 5982209424190FE3009D1C17 /* TheGameNews.app */;
+			productReference = 5982209424190FE3009D1C17 /* aiGameNews.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -286,7 +286,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5982208F24190FE3009D1C17 /* Build configuration list for PBXProject "TheGameNews" */;
+			buildConfigurationList = 5982208F24190FE3009D1C17 /* Build configuration list for PBXProject "aiGameNews" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -301,7 +301,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5982209324190FE3009D1C17 /* TheGameNews */,
+				5982209324190FE3009D1C17 /* aiGameNews */,
 			);
 		};
 /* End PBXProject section */
@@ -507,8 +507,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "aiQG-.TheGameNews";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "aiQG-.aiGameNews";
+				PRODUCT_NAME = aiGameNews;
 				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Modules";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -530,8 +530,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "aiQG-.TheGameNews";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "aiQG-.aiGameNews";
+				PRODUCT_NAME = aiGameNews;
 				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Modules";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -541,7 +541,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5982208F24190FE3009D1C17 /* Build configuration list for PBXProject "TheGameNews" */ = {
+		5982208F24190FE3009D1C17 /* Build configuration list for PBXProject "aiGameNews" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				598220A624190FE4009D1C17 /* Debug */,
@@ -550,7 +550,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		598220A824190FE4009D1C17 /* Build configuration list for PBXNativeTarget "TheGameNews" */ = {
+		598220A824190FE4009D1C17 /* Build configuration list for PBXNativeTarget "aiGameNews" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				598220A924190FE4009D1C17 /* Debug */,
