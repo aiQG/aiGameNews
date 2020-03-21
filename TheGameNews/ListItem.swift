@@ -56,7 +56,7 @@ struct ListItem: View {
 				.cornerRadius(10)
 				.overlay(
 					RoundedRectangle(cornerRadius: 10)
-						.stroke(Color.orange, lineWidth: 5)
+						.stroke(Color.gray, lineWidth: 4)
 			)
 		}
 	}
